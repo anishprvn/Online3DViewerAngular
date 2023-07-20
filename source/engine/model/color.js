@@ -119,7 +119,7 @@ export function LinearToSRGB (component)
     }
 }
 
-export function numberToHexString (intVal)
+export function IntegerToHexString (intVal)
 {
     let result = parseInt (intVal, 10).toString (16);
     while (result.length < 2) {
@@ -130,18 +130,18 @@ export function numberToHexString (intVal)
 
 export function RGBColorToHexString (color)
 {
-    let r = numberToHexString (color.r);
-    let g = numberToHexString (color.g);
-    let b = numberToHexString (color.b);
+    let r = IntegerToHexString (color.r);
+    let g = IntegerToHexString (color.g);
+    let b = IntegerToHexString (color.b);
     return r + g + b;
 }
 
 export function RGBAColorToHexString (color)
 {
-    let r = numberToHexString (color.r);
-    let g = numberToHexString (color.g);
-    let b = numberToHexString (color.b);
-    let a = numberToHexString (color.a);
+    let r = IntegerToHexString (color.r);
+    let g = IntegerToHexString (color.g);
+    let b = IntegerToHexString (color.b);
+    let a = IntegerToHexString (color.a);
     return r + g + b + a;
 }
 

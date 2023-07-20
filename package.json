@@ -1,12 +1,13 @@
 {
-	"name": "online-3d-viewer",
-	"version": "0.9.0",
-	"description": "Online 3D Viewer",
+	"name": "angular-3d-viewer",
+	"version": "0.3.0",
+	"description": "Angular 3D Viewer",
 	"license": "MIT",
 	"type": "module",
 	"main": "./build/engine/o3dv.module.js",
-	"repository": "github:kovacsv/Online3DViewer",
+	"repository": "github:anishprvn/Online3DViewerAngular",
 	"keywords": [
+		"angular",
 		"3d",
 		"viewer",
 		"cad",
