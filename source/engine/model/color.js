@@ -1,12 +1,12 @@
 /**
- * RGB color object. Components are integers in the range of 0..255.
+ * RGB color object. Components are numbers in the range of 0..255.
  */
 export class RGBColor
 {
     /**
-     * @param {integer} r Red component.
-     * @param {integer} g Green component.
-     * @param {integer} b Blue component.
+     * @param {number} r Red component.
+     * @param {number} g Green component.
+     * @param {number} b Blue component.
      */
     constructor (r, g, b)
     {
@@ -17,9 +17,9 @@ export class RGBColor
 
     /**
      * Sets the value of all components.
-     * @param {integer} r Red component.
-     * @param {integer} g Green component.
-     * @param {integer} b Blue component.
+     * @param {number} r Red component.
+     * @param {number} g Green component.
+     * @param {number} b Blue component.
      */
     Set (r, g, b)
     {
@@ -39,15 +39,15 @@ export class RGBColor
 }
 
 /**
- * RGBA color object. Components are integers in the range of 0..255.
+ * RGBA color object. Components are numbers in the range of 0..255.
  */
 export class RGBAColor
 {
     /**
-     * @param {integer} r Red component.
-     * @param {integer} g Green component.
-     * @param {integer} b Blue component.
-     * @param {integer} a Alpha component.
+     * @param {number} r Red component.
+     * @param {number} g Green component.
+     * @param {number} b Blue component.
+     * @param {number} a Alpha component.
      */
     constructor (r, g, b, a)
     {
@@ -59,10 +59,10 @@ export class RGBAColor
 
     /**
      * Sets the value of all components.
-     * @param {integer} r Red component.
-     * @param {integer} g Green component.
-     * @param {integer} b Blue component.
-     * @param {integer} a Alpha component.
+     * @param {number} r Red component.
+     * @param {number} g Green component.
+     * @param {number} b Blue component.
+     * @param {number} a Alpha component.
      */
     Set (r, g, b, a)
     {
@@ -119,7 +119,7 @@ export function LinearToSRGB (component)
     }
 }
 
-export function IntegerToHexString (intVal)
+export function numberToHexString (intVal)
 {
     let result = parseInt (intVal, 10).toString (16);
     while (result.length < 2) {
@@ -130,18 +130,18 @@ export function IntegerToHexString (intVal)
 
 export function RGBColorToHexString (color)
 {
-    let r = IntegerToHexString (color.r);
-    let g = IntegerToHexString (color.g);
-    let b = IntegerToHexString (color.b);
+    let r = numberToHexString (color.r);
+    let g = numberToHexString (color.g);
+    let b = numberToHexString (color.b);
     return r + g + b;
 }
 
 export function RGBAColorToHexString (color)
 {
-    let r = IntegerToHexString (color.r);
-    let g = IntegerToHexString (color.g);
-    let b = IntegerToHexString (color.b);
-    let a = IntegerToHexString (color.a);
+    let r = numberToHexString (color.r);
+    let g = numberToHexString (color.g);
+    let b = numberToHexString (color.b);
+    let a = numberToHexString (color.a);
     return r + g + b + a;
 }
 
